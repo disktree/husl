@@ -1,0 +1,76 @@
+
+:root {
+	--background: #000;
+	--f_high: #fff;
+	--f_med: #fff;
+	--f_low: #fff;
+	--f_inv: #000;
+	--b_high: #000;
+	--b_med: #000;
+	--b_low: #000;
+	--b_inv: #fff;
+}
+
+html {
+	font-family: monospace;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	min-width: 100vw;
+	min-height: 100vh;
+	overflow: hidden;
+	background: var(--background);
+	color: var(--f_med);
+}
+
+ul, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+input, button {
+	font-family: monospace;
+	background: none;
+	border: none;
+	outline: none;
+}
+
+button {
+	color: var(--f_med);
+	padding: 8px 16px;
+	cursor: pointer;
+}
+button:hover {
+
+}
+
+input {
+	padding: 8px 16px;
+	text-align: center;
+	
+}
+input::selection {
+	background: var(--background);
+	color: var(--f_med);
+	mix-blend-mode: exclusion;
+}
+
+.husl {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.husl .palette {
+	display: flex;
+}
+.husl .control {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}

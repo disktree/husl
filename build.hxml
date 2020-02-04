@@ -1,0 +1,6 @@
+-js web/app.js
+-main App
+-cp src
+-lib om.color
+-debug
+-dce full
