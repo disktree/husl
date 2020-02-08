@@ -1,6 +1,16 @@
 
+@font-face {
+    font-family: 'Jetbrains Mono';
+	font-display: swap;
+	font-style: normal;
+    src:
+		local('Jetbrains Mono'),
+		local('Jetbrains Mono Regular'),
+		url('https://disktree.net/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+
 :root {
-	--background: #000;
+	--background: #050505;
 	--f_high: #fff;
 	--f_med: #fff;
 	--f_low: #fff;
@@ -12,10 +22,11 @@
 }
 
 html {
-	font-family: monospace;
+	
 }
 
 body {
+	
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -23,6 +34,10 @@ body {
 	min-width: 100vw;
 	min-height: 100vh;
 	overflow: hidden;
+
+	font-family: 'Jetbrains Mono';
+	font-size: 13px;
+
 	background: var(--background);
 	color: var(--f_med);
 }
@@ -34,19 +49,46 @@ ul, li {
 }
 
 input, button {
-	font-family: monospace;
+	font-family: 'Jetbrains Mono';
+	font-size: 13px;
 	background: none;
 	border: none;
 	outline: none;
 }
 
 button {
-	color: var(--f_med);
-	padding: 8px 16px;
+	position: relative;
+	white-space: nowrap;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-align: center;
+	user-select: none;
+	overflow: visible;
+	outline: none;
 	cursor: pointer;
+
+	font-size: 13px;
+	font-weight: 500;
+
+	min-width: 48px;
+	line-height: 32px;
+	padding: 0 16px;
+
+	box-shadow:
+		0 3px 1px -2px rgba(0,0,0,.2),
+		0 2px 2px 0 rgba(0,0,0,.14),
+		0 1px 5px 0 rgba(0,0,0,.12);
+
+	-webkit-tap-highlight-color: transparent;
+	border-radius: 4px;
+	border: 1px solid #505050;
+	background-repeat: repeat-x;
+	background-image: linear-gradient(-180deg, #0a0a0a 0%, #050505 90%);
+	color: #505050;
 }
 button:hover {
-
+	color: #707070;
+	background: #0f0f0f;
 }
 
 input {
@@ -70,7 +112,17 @@ input::selection {
 	display: flex;
 }
 .husl .control {
+	position: relative;
+	top: 12px;
 	display: flex;
 	justify-content: center;
 	width: 100%;
+}
+.husl .control button {
+	width: 100%;
+	margin: 0 8px;
+}
+
+footer {
+	display: none;
 }

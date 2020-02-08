@@ -113,10 +113,21 @@ class App {
 				switch e.keyCode {
 				case 69: // E
 					exportGimpPalette();
-				default:
+				case 71, 32: // G, Space				
 					generatePalette();
+				default:
 				}
 			}
+
+			window.onmessage = e -> {
+				switch e.data {
+				case 'generate': generatePalette();
+				case 'export': exportGimpPalette();
+				case _:
+				}
+			}
+
+			window.oncontextmenu = e -> e.preventDefault();
     	}
     }
 }
