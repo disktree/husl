@@ -6,7 +6,7 @@
     src:
 		local('Jetbrains Mono'),
 		local('Jetbrains Mono Regular'),
-		url('https://disktree.net/font/JetBrainsMono-Regular.woff2') format('woff2');
+		url('font/JetBrainsMono-Regular.woff2') format('woff2');
 }
 
 :root {
