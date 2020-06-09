@@ -1,4 +1,5 @@
 
 HUSL
 ====
-HSLUV color palette generator.
+HSLUV color palette generator.  
+http://husl.disktree.net/
